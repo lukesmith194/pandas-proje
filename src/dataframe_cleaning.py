@@ -53,6 +53,14 @@ def limpiar(x):
         return "unknown"
 
 def clean_species(x):
+    """
+        Cleans out species column and joins similar activities into the same 
+    group.
+    input:
+        string
+    returns:
+        correct string with activities grouped up
+    """
     reef= re.findall(r"[R|r]ee\w+",str(x))
     white= re.findall(r"[W|w]hit\w+",str(x))
     wobbegong= re.findall(r"[W|w]obbegon\w+",str(x))
